@@ -10,7 +10,7 @@ We present a novel framework to quantify and enhance the reliability of large la
 
 ## Getting Start
 
-```git clone git@github.com:CarelessLee/From-Steps-to-Scores.git
+```git clone git@github.com:CarelessLee/From-Steps-to-Scores.git &&
    cd From-Steps-to-Scores
 ```
 
