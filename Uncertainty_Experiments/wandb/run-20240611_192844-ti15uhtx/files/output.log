@@ -1,0 +1,3 @@
+
+  0%|                                                                                                                                | 0/250 [00:00<?, ?it/s]
+Error during training: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`model_response` in this case) have excessive nesting (inputs type `list` where type `int` is expected).

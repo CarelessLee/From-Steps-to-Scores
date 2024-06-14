@@ -1,0 +1,4 @@
+  0%|                                                                                                                                  | 0/8 [00:00<?, ?it/s]/export/project/jzhanggr/miniconda3/envs/lmflow/lib/python3.9/site-packages/trl/trainer/dpo_trainer.py:1249: UserWarning: compute_loss is only implemented for DPODataCollatorWithPadding, and you passed a datacollator that is different than DPODataCollatorWithPadding - you might see unexpected behavior. Alternatively, you can implement your own prediction_step method if you are using a custom data collator
+  warnings.warn(
+  0%|                                                                                                                                  | 0/8 [00:00<?, ?it/s]
+Error during training: 'rejected_input_ids'

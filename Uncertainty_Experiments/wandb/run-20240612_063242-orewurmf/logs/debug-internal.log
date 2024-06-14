@@ -1,0 +1,369 @@
+2024-06-12 06:32:42,949 INFO    StreamThr :1322532 [internal.py:wandb_internal():87] W&B internal server running at pid: 1322532, started at: 2024-06-12 06:32:42.948493
+2024-06-12 06:32:42,951 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status
+2024-06-12 06:32:42,953 INFO    WriterThread:1322532 [datastore.py:open_for_write():85] open: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/run-orewurmf.wandb
+2024-06-12 06:32:42,954 DEBUG   SenderThread:1322532 [sender.py:send():336] send: header
+2024-06-12 06:32:42,955 DEBUG   SenderThread:1322532 [sender.py:send():336] send: run
+2024-06-12 06:32:43,504 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: check_version
+2024-06-12 06:32:43,506 INFO    SenderThread:1322532 [dir_watcher.py:__init__():219] watching files in: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files
+2024-06-12 06:32:43,507 INFO    SenderThread:1322532 [sender.py:_start_run_threads():1078] run started: orewurmf with start time 1718145162.947346
+2024-06-12 06:32:43,507 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: summary_record
+2024-06-12 06:32:43,507 INFO    SenderThread:1322532 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-12 06:32:43,508 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: check_version
+2024-06-12 06:32:43,559 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: run_start
+2024-06-12 06:32:43,593 DEBUG   HandlerThread:1322532 [system_info.py:__init__():31] System info init
+2024-06-12 06:32:43,593 DEBUG   HandlerThread:1322532 [system_info.py:__init__():46] System info init done
+2024-06-12 06:32:43,593 INFO    HandlerThread:1322532 [system_monitor.py:start():183] Starting system monitor
+2024-06-12 06:32:43,593 INFO    SystemMonitor:1322532 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2024-06-12 06:32:43,593 INFO    HandlerThread:1322532 [system_monitor.py:probe():204] Collecting system info
+2024-06-12 06:32:43,594 INFO    SystemMonitor:1322532 [interfaces.py:start():187] Started cpu monitoring
+2024-06-12 06:32:43,594 INFO    SystemMonitor:1322532 [interfaces.py:start():187] Started disk monitoring
+2024-06-12 06:32:43,594 INFO    SystemMonitor:1322532 [interfaces.py:start():187] Started gpu monitoring
+2024-06-12 06:32:43,595 INFO    SystemMonitor:1322532 [interfaces.py:start():187] Started memory monitoring
+2024-06-12 06:32:43,595 INFO    SystemMonitor:1322532 [interfaces.py:start():187] Started network monitoring
+2024-06-12 06:32:43,648 DEBUG   HandlerThread:1322532 [system_info.py:probe():195] Probing system
+2024-06-12 06:32:43,653 DEBUG   HandlerThread:1322532 [git.py:repo():40] git repository is invalid
+2024-06-12 06:32:43,653 DEBUG   HandlerThread:1322532 [system_info.py:probe():240] Probing system done
+2024-06-12 06:32:43,653 DEBUG   HandlerThread:1322532 [system_monitor.py:probe():213] {'os': 'Linux-5.15.0-107-generic-x86_64-with-glibc2.35', 'python': '3.9.19', 'heartbeatAt': '2024-06-11T22:32:43.648487', 'startedAt': '2024-06-11T22:32:42.940731', 'docker': None, 'cuda': None, 'args': ('--local_rank=0', '--model_name_or_path', 'meta-llama/Meta-Llama-3-8B', '--dataset_path', 'DPO_Data/fully_processed_gsm8k_responses.json', '--output_dir', 'gsm8k_dpo_training_output', '--deepspeed_config', 'ds_config_zero3_dpo.json'), 'state': 'running', 'program': '/home/jzhanggr/jzhanggr001/Uncertainty_Experiments/new_dpo.py', 'codePath': 'new_dpo.py', 'host': 'zxcpu5', 'username': 'jzhanggr', 'executable': '/export/project/jzhanggr/miniconda3/envs/lmflow/bin/python', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2502.7985937500002, 'min': 1200.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3599.998, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3600.001, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3599.999, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1900.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}], 'disk': {'total': 19.990234375, 'used': 14.194477081298828}, 'gpu': 'NVIDIA A100 80GB PCIe', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}], 'memory': {'total': 503.32591247558594}}
+2024-06-12 06:32:43,653 INFO    HandlerThread:1322532 [system_monitor.py:probe():214] Finished collecting system info
+2024-06-12 06:32:43,653 INFO    HandlerThread:1322532 [system_monitor.py:probe():217] Publishing system info
+2024-06-12 06:32:43,654 DEBUG   HandlerThread:1322532 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-06-12 06:32:43,654 DEBUG   HandlerThread:1322532 [system_info.py:_save_pip():67] Saving pip packages done
+2024-06-12 06:32:43,654 DEBUG   HandlerThread:1322532 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-06-12 06:32:44,508 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/requirements.txt
+2024-06-12 06:32:44,508 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/conda-environment.yaml
+2024-06-12 06:32:44,509 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/wandb-summary.json
+2024-06-12 06:32:46,142 DEBUG   HandlerThread:1322532 [system_info.py:_save_conda():86] Saving conda packages done
+2024-06-12 06:32:46,143 INFO    HandlerThread:1322532 [system_monitor.py:probe():219] Finished publishing system info
+2024-06-12 06:32:46,146 DEBUG   SenderThread:1322532 [sender.py:send():336] send: files
+2024-06-12 06:32:46,147 INFO    SenderThread:1322532 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2024-06-12 06:32:46,151 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:32:46,152 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:32:46,430 DEBUG   SenderThread:1322532 [sender.py:send():336] send: telemetry
+2024-06-12 06:32:46,430 DEBUG   SenderThread:1322532 [sender.py:send():336] send: config
+2024-06-12 06:32:46,432 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:32:46,432 DEBUG   SenderThread:1322532 [sender.py:send():336] send: telemetry
+2024-06-12 06:32:46,432 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:32:46,432 WARNING SenderThread:1322532 [sender.py:send_metric():1283] Seen metric with glob (shouldn't happen)
+2024-06-12 06:32:46,432 DEBUG   SenderThread:1322532 [sender.py:send():336] send: telemetry
+2024-06-12 06:32:46,507 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/conda-environment.yaml
+2024-06-12 06:32:46,508 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/wandb-metadata.json
+2024-06-12 06:32:46,508 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:32:46,965 INFO    wandb-upload_0:1322532 [upload_job.py:push():138] Uploaded file /tmp/tmpqhqja6pbwandb/63z2qjow-wandb-metadata.json
+2024-06-12 06:32:48,434 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:32:48,508 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:32:53,435 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:32:58,435 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:01,151 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:33:01,152 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:33:02,512 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:33:03,554 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:08,555 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:13,560 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:14,514 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/config.yaml
+2024-06-12 06:33:16,151 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:33:16,152 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:33:19,400 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:24,401 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:29,401 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:31,152 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:33:31,152 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:33:34,461 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:39,461 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:43,596 DEBUG   SystemMonitor:1322532 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2024-06-12 06:33:43,599 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:33:44,601 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:46,157 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:33:46,164 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:33:50,489 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:33:52,526 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:33:56,013 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:01,015 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:03,004 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:34:03,006 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:34:06,241 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:06,543 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:34:11,241 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:13,602 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:34:16,604 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:18,003 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:34:18,003 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:34:22,295 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:27,296 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:32,297 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:33,003 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:34:33,003 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:34:38,265 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:43,266 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:43,605 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:34:48,003 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:34:48,004 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:34:49,239 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:54,240 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:34:59,240 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:03,004 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:35:03,004 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:35:04,271 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:09,281 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:13,649 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:35:14,684 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:18,371 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:35:18,374 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:35:19,816 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:21,582 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:35:24,817 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:29,817 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:33,370 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:35:33,371 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:35:35,679 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:40,680 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:43,643 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:35:46,645 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:48,370 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:35:48,371 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:35:52,611 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:35:57,612 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:02,613 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:03,371 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:36:03,372 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:36:07,680 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:12,680 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:13,647 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:36:18,376 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:36:18,377 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:36:18,706 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:23,711 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:28,716 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:33,371 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:36:33,372 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:36:34,684 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:35,629 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:36:39,684 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:43,650 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:36:45,652 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:48,371 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:36:48,372 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:36:51,652 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:36:56,654 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:01,655 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:03,372 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:37:03,372 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:37:07,608 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:12,609 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:13,654 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:37:17,656 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:18,372 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:37:18,373 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:37:23,593 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:28,593 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:33,379 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:37:33,384 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:37:33,663 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:38,669 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:43,673 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:43,709 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:37:48,373 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:37:48,373 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:37:48,688 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:49,683 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:37:53,688 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:37:58,689 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:03,373 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:38:03,373 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:38:03,690 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:08,691 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:13,691 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:13,706 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:38:18,373 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:38:18,374 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:38:19,680 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:24,681 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:29,681 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:33,374 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:38:33,374 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:38:35,597 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:40,598 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:43,712 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:38:45,714 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:48,377 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:38:48,417 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:38:50,767 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:38:55,790 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:01,394 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:01,734 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:39:03,374 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:39:03,374 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:39:06,655 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:11,655 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:13,711 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:39:16,713 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:18,374 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:39:18,374 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:39:22,661 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:27,662 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:32,663 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:33,376 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:39:33,377 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:39:38,625 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:43,625 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:43,714 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:39:48,376 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:39:48,378 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:39:48,627 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:53,627 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:39:58,630 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:03,635 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:03,649 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:40:03,650 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:40:08,995 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:13,715 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:40:13,782 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:40:14,717 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:18,649 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:40:18,649 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:40:19,873 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:24,874 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:29,874 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:33,649 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:40:33,650 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:40:34,934 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:39,935 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:43,717 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:40:45,719 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:48,649 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:40:48,650 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:40:50,940 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:40:55,940 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:00,941 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:03,649 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:41:03,650 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:41:06,873 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:11,876 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:13,726 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:41:17,728 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:18,650 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:41:18,650 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:41:22,924 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:27,930 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:31,821 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:41:33,650 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:41:33,650 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:41:33,883 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:38,883 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:43,730 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:41:44,731 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:48,651 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:41:48,652 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:41:49,972 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:54,973 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:41:59,974 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:03,650 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:42:03,651 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:42:05,969 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:10,969 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:13,733 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:42:16,736 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:18,650 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:42:18,651 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:42:21,934 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:26,935 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:31,936 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:33,650 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:42:33,651 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:42:37,919 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:42,919 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:43,735 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:42:48,671 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:42:48,677 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:42:49,026 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:54,041 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:42:55,869 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:42:59,118 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:03,670 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:43:03,670 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:43:04,979 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:09,980 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:13,739 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:43:15,742 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:18,669 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:43:18,669 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:43:20,990 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:25,991 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:30,992 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:33,667 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:43:33,668 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:43:36,992 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:41,992 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:43,742 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:43:47,745 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:48,666 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:43:48,667 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:43:52,933 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:43:57,935 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:02,937 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:04,178 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:44:04,178 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:44:07,910 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:44:08,761 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:13,744 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:44:14,746 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:19,178 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:44:19,179 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:44:20,473 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:25,474 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:30,474 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:34,181 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:44:34,182 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:44:35,530 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:40,530 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:43,746 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:44:45,747 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:49,179 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:44:49,179 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:44:51,518 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:44:56,520 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:01,520 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:04,178 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:45:04,179 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:45:07,508 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:12,509 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:13,771 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:45:17,773 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:19,193 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:45:19,194 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:45:23,644 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:28,661 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:29,205 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-12 06:45:29,218 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,219 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: metric
+2024-06-12 06:45:29,220 DEBUG   SenderThread:1322532 [sender.py:send():336] send: history
+2024-06-12 06:45:29,224 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: summary_record
+2024-06-12 06:45:29,228 INFO    SenderThread:1322532 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-12 06:45:29,990 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:45:29,991 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/wandb-summary.json
+2024-06-12 06:45:31,991 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/output.log
+2024-06-12 06:45:34,178 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:45:34,179 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:45:34,482 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:39,484 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:43,806 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats
+2024-06-12 06:45:44,815 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:45:49,178 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:45:49,179 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:45:50,532 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:46:02,727 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:46:03,746 INFO    Thread-12 :1322532 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240612_063242-orewurmf/files/config.yaml
+2024-06-12 06:46:04,188 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-12 06:46:04,191 DEBUG   SenderThread:1322532 [sender.py:send_request():363] send_request: stop_status
+2024-06-12 06:46:08,496 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:46:13,493 DEBUG   HandlerThread:1322532 [handler.py:handle_request():144] handle_request: status_report
+2024-06-12 06:46:13,783 DEBUG   SenderThread:1322532 [sender.py:send():336] send: stats

@@ -1,0 +1,701 @@
+2024-06-09 08:51:45,964 INFO    StreamThr :441352 [internal.py:wandb_internal():87] W&B internal server running at pid: 441352, started at: 2024-06-09 08:51:45.964151
+2024-06-09 08:51:45,965 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status
+2024-06-09 08:51:45,969 INFO    WriterThread:441352 [datastore.py:open_for_write():85] open: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/run-3ammshqf.wandb
+2024-06-09 08:51:45,970 DEBUG   SenderThread:441352 [sender.py:send():336] send: header
+2024-06-09 08:51:45,970 DEBUG   SenderThread:441352 [sender.py:send():336] send: run
+2024-06-09 08:51:46,446 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: check_version
+2024-06-09 08:51:46,446 INFO    SenderThread:441352 [dir_watcher.py:__init__():219] watching files in: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files
+2024-06-09 08:51:46,446 INFO    SenderThread:441352 [sender.py:_start_run_threads():1078] run started: 3ammshqf with start time 1717894305.964889
+2024-06-09 08:51:46,447 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:51:46,447 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:51:46,447 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: check_version
+2024-06-09 08:51:46,521 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: run_start
+2024-06-09 08:51:46,566 DEBUG   HandlerThread:441352 [system_info.py:__init__():31] System info init
+2024-06-09 08:51:46,566 DEBUG   HandlerThread:441352 [system_info.py:__init__():46] System info init done
+2024-06-09 08:51:46,566 INFO    HandlerThread:441352 [system_monitor.py:start():183] Starting system monitor
+2024-06-09 08:51:46,566 INFO    SystemMonitor:441352 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2024-06-09 08:51:46,566 INFO    HandlerThread:441352 [system_monitor.py:probe():204] Collecting system info
+2024-06-09 08:51:46,567 INFO    SystemMonitor:441352 [interfaces.py:start():187] Started cpu monitoring
+2024-06-09 08:51:46,568 INFO    SystemMonitor:441352 [interfaces.py:start():187] Started disk monitoring
+2024-06-09 08:51:46,568 INFO    SystemMonitor:441352 [interfaces.py:start():187] Started gpu monitoring
+2024-06-09 08:51:46,569 INFO    SystemMonitor:441352 [interfaces.py:start():187] Started memory monitoring
+2024-06-09 08:51:46,569 INFO    SystemMonitor:441352 [interfaces.py:start():187] Started network monitoring
+2024-06-09 08:51:46,627 DEBUG   HandlerThread:441352 [system_info.py:probe():195] Probing system
+2024-06-09 08:51:46,633 DEBUG   HandlerThread:441352 [git.py:repo():40] git repository is invalid
+2024-06-09 08:51:46,633 DEBUG   HandlerThread:441352 [system_info.py:probe():240] Probing system done
+2024-06-09 08:51:46,633 DEBUG   HandlerThread:441352 [system_monitor.py:probe():213] {'os': 'Linux-5.15.0-107-generic-x86_64-with-glibc2.35', 'python': '3.9.19', 'heartbeatAt': '2024-06-09T00:51:46.627308', 'startedAt': '2024-06-09T00:51:45.955270', 'docker': None, 'cuda': None, 'args': ('--local_rank=0', '--model_name_or_path', 'meta-llama/Meta-Llama-3-8B', '--dataset_path', 'gsm8k_train.json', '--output_dir', 'gsm8k_model', '--overwrite_output_dir', '--num_train_epochs', '2', '--learning_rate', '1e-5', '--per_device_train_batch_size', '4', '--per_device_eval_batch_size', '4', '--deepspeed', 'ds_config_zero2.json', '--bf16', '--run_name', 'prediction', '--logging_steps', '1', '--do_train', '--ddp_timeout', '72000', '--save_steps', '5000', '--warmup_ratio', '0.03', '--validation_split_percentage', '10', '--evaluation_strategy', 'steps', '--eval_steps', '4', '--gradient_accumulation_steps', '1', '--gradient_checkpointing', 'True', '--dataloader_num_workers', '1'), 'state': 'running', 'program': '/home/jzhanggr/jzhanggr001/Uncertainty_Experiments/prediction_model_train.py', 'codePath': 'prediction_model_train.py', 'host': 'zxcpu5', 'username': 'jzhanggr', 'executable': '/export/project/jzhanggr/miniconda3/envs/lmflow/bin/python', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2002.4694166666668, 'min': 1200.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3599.998, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2700.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1900.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3599.999, 'min': 1200.0, 'max': 4000.0}, {'current': 3599.999, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3599.999, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2500.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1900.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2400.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2600.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 4000.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2300.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}, {'current': 1200.0, 'min': 1200.0, 'max': 4000.0}], 'disk': {'total': 19.990234375, 'used': 14.01968002319336}, 'gpu': 'NVIDIA A100 80GB PCIe', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}, {'name': 'NVIDIA A100 80GB PCIe', 'memory_total': 85899345920}], 'memory': {'total': 503.32591247558594}}
+2024-06-09 08:51:46,633 INFO    HandlerThread:441352 [system_monitor.py:probe():214] Finished collecting system info
+2024-06-09 08:51:46,634 INFO    HandlerThread:441352 [system_monitor.py:probe():217] Publishing system info
+2024-06-09 08:51:46,634 DEBUG   HandlerThread:441352 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-06-09 08:51:46,634 DEBUG   HandlerThread:441352 [system_info.py:_save_pip():67] Saving pip packages done
+2024-06-09 08:51:46,634 DEBUG   HandlerThread:441352 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-06-09 08:51:47,449 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/requirements.txt
+2024-06-09 08:51:47,450 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/conda-environment.yaml
+2024-06-09 08:51:47,450 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:51:49,134 DEBUG   HandlerThread:441352 [system_info.py:_save_conda():86] Saving conda packages done
+2024-06-09 08:51:49,136 INFO    HandlerThread:441352 [system_monitor.py:probe():219] Finished publishing system info
+2024-06-09 08:51:49,141 DEBUG   SenderThread:441352 [sender.py:send():336] send: files
+2024-06-09 08:51:49,141 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2024-06-09 08:51:49,149 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:51:49,150 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:51:49,441 DEBUG   SenderThread:441352 [sender.py:send():336] send: telemetry
+2024-06-09 08:51:49,441 DEBUG   SenderThread:441352 [sender.py:send():336] send: config
+2024-06-09 08:51:49,443 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:51:49,443 DEBUG   SenderThread:441352 [sender.py:send():336] send: telemetry
+2024-06-09 08:51:49,443 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:51:49,444 WARNING SenderThread:441352 [sender.py:send_metric():1283] Seen metric with glob (shouldn't happen)
+2024-06-09 08:51:49,444 DEBUG   SenderThread:441352 [sender.py:send():336] send: telemetry
+2024-06-09 08:51:49,450 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/conda-environment.yaml
+2024-06-09 08:51:49,450 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-metadata.json
+2024-06-09 08:51:49,450 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:51:49,767 INFO    wandb-upload_0:441352 [upload_job.py:push():138] Uploaded file /tmp/tmpr9of6zpowandb/ql1prwf3-wandb-metadata.json
+2024-06-09 08:51:51,453 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:51:51,831 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:51:57,464 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:51:57,701 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:02,702 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:07,704 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:12,705 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:14,669 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:52:14,670 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:52:17,962 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:18,109 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:52:18,289 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:52:18,289 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:52:18,289 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:52:18,289 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:52:18,289 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:52:18,290 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:52:18,292 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:52:18,479 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/config.yaml
+2024-06-09 08:52:18,480 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:52:20,485 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:52:23,295 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:28,298 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:29,667 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:52:29,668 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:52:34,001 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:36,259 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:52:36,260 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:52:36,261 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:52:36,264 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:52:36,499 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:52:36,500 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:52:38,500 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:52:39,265 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:44,268 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:44,668 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:52:44,669 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:52:46,569 DEBUG   SystemMonitor:441352 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2024-06-09 08:52:46,572 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:52:46,642 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:52:46,643 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:52:46,644 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:52:46,644 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:52:47,510 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:52:48,511 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:52:49,651 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:50,519 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/config.yaml
+2024-06-09 08:52:55,022 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:52:58,956 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:52:58,957 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:52:58,958 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:52:58,958 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:52:59,525 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:53:00,526 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:00,711 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:00,712 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:53:00,712 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:53:02,526 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:04,527 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:05,977 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:06,527 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:08,532 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:09,849 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:53:09,857 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:53:09,861 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:53:09,865 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:53:09,866 DEBUG   SenderThread:441352 [sender.py:send():336] send: metric
+2024-06-09 08:53:09,867 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:53:09,868 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:53:09,873 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:53:10,535 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:10,537 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:53:11,877 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:12,535 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:16,582 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:53:17,584 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:21,508 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:53:21,537 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:53:22,827 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:23,558 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/config.yaml
+2024-06-09 08:53:25,496 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:53:25,499 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:53:25,500 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:53:25,502 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:53:25,558 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:53:26,558 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:28,503 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:28,559 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:33,506 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:37,243 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:53:37,244 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:53:39,472 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:41,048 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:53:41,050 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:53:41,051 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:53:41,052 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:53:41,574 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:53:42,574 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:45,056 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:46,586 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:53:50,588 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:53:51,946 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:53:51,948 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:53:51,948 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:53:51,952 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:53:52,237 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:53:52,237 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:53:52,588 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:53:54,588 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:53:56,542 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:01,545 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:06,546 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:07,237 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:54:07,237 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:54:07,330 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:54:07,560 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:54:07,560 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:54:07,561 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:54:07,602 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:54:08,602 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:54:10,603 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:54:12,015 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:12,606 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:54:14,608 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:54:16,542 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:54:16,546 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:54:16,546 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:54:16,547 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:54:16,585 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:54:16,609 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:54:16,609 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:54:17,586 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:18,609 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:54:22,290 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:54:22,305 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:54:22,719 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:27,721 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:32,536 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:54:32,537 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:54:32,538 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:54:32,538 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:54:32,627 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:54:33,539 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:34,627 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:54:37,240 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:54:37,240 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:54:38,564 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:43,564 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:46,590 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:54:48,592 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:51,146 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:54:51,148 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:54:51,149 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:54:51,150 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:54:51,639 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:54:52,239 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:54:52,240 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:54:52,640 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:54:54,558 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:54:59,564 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:02,071 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:55:02,074 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:55:02,075 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:55:02,077 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:55:02,650 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:55:04,651 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:05,078 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:07,247 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:55:07,252 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:55:10,513 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:15,517 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:16,594 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:55:16,946 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:55:16,948 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:55:16,949 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:55:16,950 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:55:17,662 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:55:18,662 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:20,639 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:20,663 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:22,245 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:55:22,246 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:55:22,666 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:24,666 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:25,887 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:25,887 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:55:25,888 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:55:25,889 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:55:25,890 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:55:26,667 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:26,667 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:55:28,667 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:30,892 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:35,893 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:37,244 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:55:37,245 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:55:37,685 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:55:37,686 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:55:37,687 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:55:37,690 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:55:38,677 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:38,677 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:55:40,677 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:41,692 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:46,596 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:55:47,136 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:47,136 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:55:47,139 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:55:47,140 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:55:47,141 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:55:47,682 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:55:48,682 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:55:52,143 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:53,508 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:55:53,509 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:55:57,089 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:55:57,091 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:55:57,091 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:55:57,092 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:55:57,691 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:55:58,092 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:55:58,691 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:03,095 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:07,008 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:56:07,011 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:56:07,012 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:56:07,013 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:56:07,701 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:56:08,135 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:08,507 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:56:08,507 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:56:08,701 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:10,702 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:12,349 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:56:12,352 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:56:12,353 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:56:12,356 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:56:12,703 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:12,703 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:56:13,357 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:14,704 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:16,602 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:56:18,604 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:22,951 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:56:22,953 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:56:22,954 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:56:22,957 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:56:23,507 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:56:23,508 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:56:23,712 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:56:23,820 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:24,712 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:28,823 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:32,441 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:56:32,443 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:56:32,443 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:56:32,444 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:56:32,720 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:56:34,445 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:34,721 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:38,579 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:56:38,585 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:56:39,922 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:41,850 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:56:41,852 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:56:41,852 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:56:41,853 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:56:42,730 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:42,730 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:56:44,730 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:45,857 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:46,610 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:56:51,579 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:51,580 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:56:51,581 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:56:51,582 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:56:51,583 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:56:51,736 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:56:52,737 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:53,578 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:56:53,578 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:56:54,737 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:56,696 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:56:56,738 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:56:56,848 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:56:56,850 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:56:56,851 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:56:56,854 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:56:57,738 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:56:58,739 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:57:01,856 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:06,857 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:07,518 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:57:07,519 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:57:07,520 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:57:07,522 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:57:07,747 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:57:08,578 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:57:08,578 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:57:08,747 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:57:12,812 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:16,609 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:57:17,002 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:57:17,004 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:57:17,004 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:57:17,005 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:57:17,756 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:57:18,006 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:18,756 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:57:23,011 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:23,580 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:57:23,581 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:57:26,418 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:57:26,419 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:57:26,419 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:57:26,421 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:57:26,766 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:57:28,422 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:28,766 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:57:33,424 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:35,798 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:57:35,800 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:57:35,800 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:57:35,801 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:57:36,777 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:57:36,777 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:57:38,468 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:38,578 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:57:38,579 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:57:38,777 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:57:40,777 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:57:41,151 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:57:41,152 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:57:41,154 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:57:41,157 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:57:41,778 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:57:42,778 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:57:44,162 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:46,616 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:57:49,618 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:51,266 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:57:51,268 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:57:51,268 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:57:51,269 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:57:51,784 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:57:52,784 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:57:53,578 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:57:53,579 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:57:54,798 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:57:59,797 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:00,997 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:58:00,999 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:58:00,999 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:58:01,000 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:58:01,794 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:58:02,794 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:05,005 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:08,579 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:58:08,580 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:58:10,836 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:11,065 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:58:11,066 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:58:11,066 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:58:11,067 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:58:11,802 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:58:12,802 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:16,071 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:16,623 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:58:20,550 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:58:20,552 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:58:20,552 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:58:20,553 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:58:20,810 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:58:21,554 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:22,811 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:23,578 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:58:23,579 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:58:23,812 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:24,812 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:26,499 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:58:26,501 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:58:26,501 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:58:26,502 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:58:26,812 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:26,813 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:58:27,503 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:28,813 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:29,818 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:32,506 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:36,551 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:58:36,552 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:58:36,552 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:58:36,553 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:58:36,820 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:58:37,553 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:38,578 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:58:38,579 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:58:38,820 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:39,826 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:42,815 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:46,626 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:58:46,853 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:58:46,854 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:58:46,854 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:58:46,855 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:58:47,830 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:58:47,855 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:48,830 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:49,830 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:52,858 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:53,752 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:58:53,753 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:58:56,796 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:58:56,798 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:58:56,799 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:58:56,800 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:58:57,150 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:58:58,150 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:58:58,800 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:58:59,151 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:59:03,804 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:06,769 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:59:06,770 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:59:06,771 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:59:06,772 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:59:07,156 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:59:08,753 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:59:08,754 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:59:09,015 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:09,157 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:59:11,158 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:59:12,317 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:59:12,318 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:59:12,319 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:59:12,321 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:59:13,158 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:59:13,159 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:59:14,322 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:15,159 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:59:16,630 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:59:19,634 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:23,431 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:59:23,434 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:59:23,435 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:59:23,436 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:59:23,752 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:59:23,753 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:59:24,171 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:59:25,017 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:25,171 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:59:30,020 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:33,217 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:59:33,220 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:59:33,220 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:59:33,221 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:59:34,184 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:59:35,184 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:59:35,222 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:40,231 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:41,378 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:59:41,383 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:59:45,250 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:45,251 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:59:45,252 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:59:45,252 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:59:45,253 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:59:46,208 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:59:46,631 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 08:59:47,208 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:59:50,634 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:55,130 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 08:59:55,131 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 08:59:55,131 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 08:59:55,132 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 08:59:55,216 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 08:59:56,132 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 08:59:56,376 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 08:59:56,376 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 08:59:57,217 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 08:59:59,218 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:01,218 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:01,332 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:03,219 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:05,233 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:06,877 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:07,234 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:07,846 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:00:07,847 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:00:07,848 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:00:07,849 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:00:08,235 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:00:09,235 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:11,237 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:11,390 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:00:11,394 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:00:12,721 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:16,636 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 09:00:18,639 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:21,077 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:00:21,080 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:00:21,080 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:00:21,084 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:00:21,244 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:00:23,255 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:24,085 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:28,051 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:00:28,053 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:00:29,359 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:31,646 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:00:31,648 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:00:31,649 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:00:31,649 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:00:32,267 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:00:33,267 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:34,655 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:39,663 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:43,052 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:00:43,066 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:00:45,348 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:46,639 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 09:00:47,032 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:00:47,035 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:00:47,036 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:00:47,037 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:00:47,298 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:00:49,299 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:00:51,048 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:56,053 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:00:58,623 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:00:58,626 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:01:01,952 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:02,919 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:01:02,920 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:01:02,921 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:01:02,925 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:01:03,321 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:01:05,322 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:07,079 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:07,341 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:09,344 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:11,348 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:12,112 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:13,049 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:01:13,050 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:01:13,051 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:01:13,054 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:01:13,348 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:13,349 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:01:13,620 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:01:13,620 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:01:15,349 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:16,664 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 09:01:17,695 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:22,696 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:24,399 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:01:24,402 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:01:24,402 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:01:24,402 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:01:25,353 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:25,353 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:01:27,354 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:28,408 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:28,639 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:01:28,657 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:01:33,976 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:35,025 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:01:35,054 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:01:35,107 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:01:35,176 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:01:35,371 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:01:37,371 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:39,206 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:44,214 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:44,507 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:01:44,508 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:01:46,655 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 09:01:49,478 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:49,485 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:01:49,487 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:01:49,488 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:01:49,490 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:01:50,384 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:01:51,385 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:01:54,502 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:01:59,504 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:01,457 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:02:01,458 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:02:04,782 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:06,344 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:02:06,346 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:02:06,347 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:02:06,351 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:02:06,408 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:02:07,409 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:02:09,409 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:02:10,386 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:11,418 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:02:13,420 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:02:15,421 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:02:15,737 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:15,803 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:02:15,805 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:02:15,806 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:02:15,809 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:02:16,421 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:02:16,456 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:02:16,457 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:02:16,787 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 09:02:17,422 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:02:20,800 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:25,799 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:30,800 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:31,458 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:02:31,459 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:02:31,942 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:02:31,944 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:02:31,944 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:02:31,945 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:02:32,442 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:02:33,442 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:02:35,951 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:40,951 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:43,701 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:02:43,702 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:02:43,703 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:02:43,705 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:02:44,453 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:02:45,454 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:02:46,456 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:02:46,457 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:02:46,731 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 09:02:46,731 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:51,742 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:02:56,747 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:03:01,070 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: partial_history
+2024-06-09 09:03:01,072 DEBUG   SenderThread:441352 [sender.py:send():336] send: history
+2024-06-09 09:03:01,073 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: summary_record
+2024-06-09 09:03:01,074 INFO    SenderThread:441352 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-06-09 09:03:01,456 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:03:01,457 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:03:01,481 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:03:01,481 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/wandb-summary.json
+2024-06-09 09:03:02,704 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:03:03,482 INFO    Thread-12 :441352 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jzhanggr/jzhanggr001/Uncertainty_Experiments/wandb/run-20240609_085145-3ammshqf/files/output.log
+2024-06-09 09:03:07,710 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:03:12,953 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report
+2024-06-09 09:03:16,459 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: stop_status
+2024-06-09 09:03:16,463 DEBUG   SenderThread:441352 [sender.py:send_request():363] send_request: stop_status
+2024-06-09 09:03:16,849 DEBUG   SenderThread:441352 [sender.py:send():336] send: stats
+2024-06-09 09:03:18,852 DEBUG   HandlerThread:441352 [handler.py:handle_request():144] handle_request: status_report

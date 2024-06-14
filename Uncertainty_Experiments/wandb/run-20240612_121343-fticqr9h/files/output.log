@@ -1,0 +1,80 @@
+
+  0%|                                                                                                                                 | 0/62 [00:00<?, ?it/s]/export/project/jzhanggr/miniconda3/envs/lmflow/lib/python3.9/site-packages/torch/autograd/graph.py:744: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at ../torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+/export/project/jzhanggr/miniconda3/envs/lmflow/lib/python3.9/site-packages/deepspeed/runtime/zero/stage3.py:1252: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:78.)
+  total_norm_cuda = get_accelerator().FloatTensor([float(total_norm)])
+
+
+
+
+
+ 10%|███████████▌                                                                                                           | 6/62 [08:57<1:23:16, 89.23s/it]
+
+
+
+
+ 16%|███████████████████                                                                                                   | 10/62 [14:50<1:16:40, 88.48s/it]
+
+
+
+
+
+
+
+
+
+ 31%|████████████████████████████████████▏                                                                                 | 19/62 [28:05<1:03:01, 87.95s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 48%|██████████████████████████████████████████████████████████                                                              | 30/62 [44:16<47:02, 88.21s/it]
+{'loss': 0.0, 'grad_norm': 0.00026280717977135036, 'learning_rate': 5.161290322580646e-06, 'rewards/chosen': -0.1139163002371788, 'rewards/rejected': -19.554426193237305, 'rewards/accuracies': 1.0, 'rewards/margins': 19.440509796142578, 'logps/rejected': -539.9491577148438, 'logps/chosen': -46.37845993041992, 'logits/rejected': -0.8785419464111328, 'logits/chosen': -1.4245069026947021, 'epoch': 0.96}
+
+
+
+
+
+
+
+
+
+ 63%|████████████████████████████████████████▎                       | 39/62 [57:29<33:48, 88.18s/it]
+
+
+ 66%|█████████████████████████████████████████                     | 41/62 [1:00:24<30:44, 87.82s/it]
+
+
+
+
+
+
+
+
+
+ 81%|██████████████████████████████████████████████████            | 50/62 [1:13:33<17:33, 87.78s/it]
+
+
+
+ 85%|█████████████████████████████████████████████████████         | 53/62 [1:17:57<13:10, 87.86s/it]
+
+ 87%|██████████████████████████████████████████████████████        | 54/62 [1:19:26<11:45, 88.23s/it]
+
+
+
+
+
+
+ 97%|████████████████████████████████████████████████████████████  | 60/62 [1:28:17<02:56, 88.31s/it]
+
+
+100%|██████████████████████████████████████████████████████████████| 62/62 [1:31:12<00:00, 88.27s/it]
+{'train_runtime': 5478.8933, 'train_samples_per_second': 0.365, 'train_steps_per_second': 0.011, 'train_loss': 0.16852271646697656, 'epoch': 1.98}

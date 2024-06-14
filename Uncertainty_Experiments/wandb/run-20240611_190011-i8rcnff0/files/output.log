@@ -1,0 +1,3 @@
+
+  0%|                                                                                                                                  | 0/2 [00:00<?, ?it/s]
+Error during training: You should supply an encoding or a list of encodings to this method that includes input_ids, but you provided ['model_response', 'question', 'original_answer', 'certainty_score', 'prompt', 'chosen', 'rejected', 'prompt_input_ids', 'prompt_attention_mask', 'chosen_input_ids', 'chosen_attention_mask', 'rejected_input_ids', 'rejected_attention_mask', 'chosen_labels', 'rejected_labels']
