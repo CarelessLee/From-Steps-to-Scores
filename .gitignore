@@ -6,4 +6,7 @@
 
 *.safetensors
 
+*.png
+
+
 LMFlow/
