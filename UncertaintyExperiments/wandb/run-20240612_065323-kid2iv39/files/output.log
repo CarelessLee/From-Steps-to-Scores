@@ -1,9 +1,0 @@
-
-  0%|                                                                                                                                | 0/124 [00:00<?, ?it/s]/export/project/jzhanggr/miniconda3/envs/lmflow/lib/python3.9/site-packages/torch/autograd/graph.py:744: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at ../torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
-  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-Could not estimate the number of tokens of the input, floating-point operations will not be computed
-/export/project/jzhanggr/miniconda3/envs/lmflow/lib/python3.9/site-packages/deepspeed/runtime/zero/stage3.py:1252: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:78.)
-  total_norm_cuda = get_accelerator().FloatTensor([float(total_norm)])
-
-
-
