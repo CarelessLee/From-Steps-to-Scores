@@ -69,7 +69,9 @@ with the trained MCQ, we can now reinforce LLMs with the help of RLHF algorithms
 ./new_run_dpo.sh
 ```
 
-
+## TODO
+* Optimize and add ISP-related code
+* Optimize code for MCQ training set generator
 
 
 
