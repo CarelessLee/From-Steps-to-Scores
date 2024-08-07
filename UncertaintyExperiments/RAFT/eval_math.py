@@ -22,6 +22,7 @@ def remove_boxed(s):
         return None
 
 def process_results(doc, completion, answer):
+    extract_ans = ""
     if 'The answer is: ' in completion:
         split_ans = completion.split('The answer is: ')
         if len(split_ans) > 1:

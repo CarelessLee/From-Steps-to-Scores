@@ -6,9 +6,9 @@ python eval_gsm8k.py \
     --tensor_parallel_size $2 \
     --output_dir gsm8k_$3_$1.json \
 
-python eval_math.py \
-    --model $1 \
-    --data_file data/test/MATH_test_500.jsonl \
-    --batch_size 1000 \
-    --tensor_parallel_size $2 \
-    --output_dir math_$3_$1.json \
+#python eval_math.py \
+#    --model $1 \
+#    --data_file data/test/MATH_test_500.jsonl \
+#    --batch_size 1000 \
+#    --tensor_parallel_size $2 \
+#    --output_dir math_$3_$1.json \
