@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
     random.seed(args.random_seed)
     
-    raw_datasets = load_dataset(args.dataset)
+    raw_datasets = load_dataset(args.dataset, "main")
     raw_datasets = raw_datasets['train']
     if args.sanity_check:
         prompt = format_dataset(raw_datasets)[args.current_iter*20:(args.current_iter+1)*20]

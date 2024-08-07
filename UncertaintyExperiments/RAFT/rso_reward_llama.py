@@ -1,11 +1,13 @@
 from transformers import AutoTokenizer
-from transformers import AutoModelForCausalLM
+from transformers import AutoModelForSequenceClassification
 import torch
 import multiprocessing
 from tqdm import tqdm
 import argparse
 import json
 import time
+from vllm import LLM, SamplingParams
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -50,9 +52,9 @@ def select_sample(args,sample,model,tokenizer,candidate_tokens,step_tag_id):
         return text, scores_save
 
 
-def predict(text, model, tokenizer):
+def predict(args, text, model, tokenizer):
     model.eval()
-    inputs = tokenizer(text, return_tensors="pt")
+    inputs = tokenizer(text, return_tensors="pt").to(args.local_rank)
     with torch.no_grad():
         outputs = model(**inputs)
     logits = outputs.logits
@@ -67,12 +69,11 @@ def format_prompt_and_select(args, sample, model, tokenizer):
     best_rationale = ""
     for rationale in sample["sampled_rationales"]:
         text = f"Problem: {sample['question']}\n---\nRationale Step: {rationale}"
-        predicted_certainty_score = predict(text, model, tokenizer)
+        predicted_certainty_score = predict(args, text, model, tokenizer)
         scores_list.append(predicted_certainty_score)
         if highest_score < predicted_certainty_score:
             highest_score = predicted_certainty_score
             best_rationale = rationale
-
     best_rationale = f"{sample['question']} {best_rationale}"
     return best_rationale, scores_list
 
@@ -121,18 +122,19 @@ if __name__ == "__main__":
     while not downloaded:
         try:
             tokenizer = AutoTokenizer.from_pretrained(args.reward_name_or_path)
-            model = AutoModelForCausalLM.from_pretrained(args.reward_name_or_path, use_flash_attention_2=True,torch_dtype=torch.bfloat16).to(args.local_rank).eval()
+            model = AutoModelForSequenceClassification.from_pretrained(args.reward_name_or_path, use_flash_attention_2=True,torch_dtype=torch.bfloat16).to(args.local_rank).eval()
             downloaded = True
         except Exception as error:
             print("An error occurred:", error)
             print("Failed to load the reward model. Retrying....")
             time.sleep(2)
 
-    # pading left or padding right???
-    tokenizer.padding_side = "right"
+    #pading left or padding right???
+    tokenizer.padding_side = "left"
     if not tokenizer.pad_token:
         tokenizer.pad_token = tokenizer.eos_token
         model.config.pad_token_id = model.config.eos_token_id
+
     print("---------------")
     print("begin to load the sampling data")
     print("---------------")
