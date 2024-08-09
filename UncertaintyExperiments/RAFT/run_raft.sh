@@ -51,12 +51,12 @@ mkdir -p ${tmp_model_dir}/filtered_set
 #python merge_data.py --output_dir ${model_dir}/filtered_set
 #if [ $? -ne 0 ]; then echo "ERROR occur during calculating with the Reward Model"; exit 1; fi
 #CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 bash ./sft.sh ${sft_model} $tmp_model_dir ${model_dir}/filtered_set $((1)) ${num_iteration} ${random_seed}
-bash ./sft.sh ${sft_model} $tmp_model_dir ${model_dir}/filtered_set $((1)) ${num_iteration} ${random_seed}
-if [ $? -ne 0 ]; then echo "ERROR occur during Supervised Fine-tuning the Model"; exit 1; fi
+#bash ./sft.sh ${sft_model} $tmp_model_dir ${model_dir}/filtered_set $((1)) ${num_iteration} ${random_seed}
+#if [ $? -ne 0 ]; then echo "ERROR occur during Supervised Fine-tuning the Model"; exit 1; fi
 #bash ./evaluate.sh $tmp_model_dir ${num_gpus} ${sft_model}
-CUDA_VISIBLE_DEVICES=5 bash ./evaluate.sh $tmp_model_dir 1 ${sft_model}
+#CUDA_VISIBLE_DEVICES=5 bash ./evaluate.sh $tmp_model_dir 1 ${sft_model}
 #CUDA_VISIBLE_DEVICES=0,1,2,3 bash ./evaluate.sh $tmp_model_dir $((4)) ${sft_model}
-if [ $? -ne 0 ]; then echo "ERROR occur during the evaluation part"; exit 1; fi
+#if [ $? -ne 0 ]; then echo "ERROR occur during the evaluation part"; exit 1; fi
 
 old_model_dir=$tmp_model_dir 
 
@@ -74,8 +74,8 @@ for (( i=2; i<=$num_iteration; i++ )); do
   CUDA_VISIBLE_DEVICES=5 bash ./get_samples.sh ${old_model_dir} $((i - 1)) ${num_gpus} ${old_model_dir}/infer_set ${sanity_check} 5 ${random_seed} &
   CUDA_VISIBLE_DEVICES=6 bash ./get_samples.sh ${old_model_dir} $((i - 1)) ${num_gpus} ${old_model_dir}/infer_set ${sanity_check} 6 ${random_seed} &
   #CUDA_VISIBLE_DEVICES=7 bash ./get_samples.sh ${old_model_dir} $((i - 1)) ${num_gpus} ${old_model_dir}/infer_set ${sanity_check} 7 ${random_seed} &
-
   wait
+
   if [ $? -ne 0 ]; then echo "ERROR occur during sampling from the SFT Model"; exit 1; fi
   bash ./get_rewards.sh ${old_model_dir}/infer_set ${old_model_dir}/filtered_set ${reward_model} ${num_gpus} 0 &
   bash ./get_rewards.sh ${old_model_dir}/infer_set ${old_model_dir}/filtered_set ${reward_model} ${num_gpus} 1 &

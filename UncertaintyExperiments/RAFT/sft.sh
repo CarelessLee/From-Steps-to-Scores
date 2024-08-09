@@ -5,8 +5,7 @@ deepspeed_args="--master_port=11100"
 # deepspeed --include localhost:${CUDA_DEVICES} ${deepspeed_args} \
 log_dir="./sft_log"
 mkdir -p ${log_dir}
-#deepspeed ${deepspeed_args} \
-deepspeed --include localhost:0,1,2,3,4,5 ${deepspeed_args} \
+deepspeed ${deepspeed_args} \
   sft.py \
     --model_name_or_path $1 \
     --dataset_path $3 \

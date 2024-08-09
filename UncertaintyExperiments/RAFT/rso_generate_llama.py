@@ -133,7 +133,8 @@ if __name__ == "__main__":
     else:
         #original version
         all_prompt = format_dataset(raw_datasets)
-        prompt = all_prompt[args.current_iter*args.batch_size_per_iter:(args.current_iter+1)*args.batch_size_per_iter]
+        #prompt = all_prompt[args.current_iter*args.batch_size_per_iter:(args.current_iter+1)*args.batch_size_per_iter]
+        prompt = all_prompt
         prompt = prompt[int(len(prompt)*args.local_rank/args.num_gpus):int(len(prompt)*(args.local_rank+1)/args.num_gpus)]
 
     random.shuffle(prompt)
