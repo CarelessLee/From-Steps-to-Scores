@@ -172,10 +172,18 @@ if __name__ == "__main__":
             for text in generated_text:
                 extracted_rationale = extract_content(text)
                 if extracted_rationale != "" and extracted_rationale.startswith('Step 1:'):
+                    # for math shepherd model use
+                    if "math-shepherd" in args.model_name_or_path:
+                        extracted_rationale = extracted_rationale.replace("Result:", "The answer is:")
                     cleaned_rationales.append(extracted_rationale)
                     #f"Problem: {sample['question']}\n---\nRationale Step: {rationale}"
 
-            store_data.append({"question":question, "sampled_rationales":cleaned_rationales})
+            
+            if "math-shepherd" in args.model_name_or_path:
+                # for math shepherd model use
+                store_data.append({"prompt":question, "answers":cleaned_rationales})
+            else:
+                store_data.append({"question":question, "sampled_rationales":cleaned_rationales})
         count += 1
         if count % 1 == 0:
             save(store_data, args)

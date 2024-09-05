@@ -10,6 +10,95 @@ import sys
 import time
 MAX_INT = sys.maxsize
 
+def extract_math_shepherd_results(text):
+    sen_pattern = r'The answer is: [^.]+\.'
+    # Find all matches
+    sen_matches = re.findall(sen_pattern, text)
+
+    # Regular expression to match numbers with optional commas
+    num_pattern = r'\b\d{1,3}(?:,\d{3})*\b|\b\d+\b'
+
+    all_num_matches = []
+    for sentence in sen_matches:
+        # Find all matches
+        num_matches = re.findall(num_pattern, sentence)
+        all_num_matches += num_matches
+    
+    # Remove commas from numbers like '150,000' and convert to integers
+    numbers = [int(match.replace(',', '')) for match in all_num_matches]
+    
+    return numbers
+
+
+def extract_results_with_commas(llm_output):
+    # Use regex to find all occurrences of numbers (with or without commas) after "Result: "
+    results = re.findall(r'Result:\s*\$?([\d,]+)', llm_output)
+
+    # Remove commas from the numbers and convert them to integers
+    results_cleaned = [int(result.replace(',', '')) for result in results]
+
+    return results_cleaned
+
+def extract_result(rationale):
+    # example rationale: 'Step 1: ... Step 2: ... Step n: Result: 666'
+    # Search for the final numerical value after 'Result:'
+    match_after_result = re.search(r'Result:\s*(.*?)(?:\.\s*|$)', rationale)
+    if match_after_result:
+        # Extract the last number from the matched result text
+        final_numbers = re.findall(r'([\d,]+(?:\.\d+)?)', match_after_result.group(1))
+        if final_numbers:
+            return final_numbers[-1].strip()
+
+    # Fallback: Search for the last number before 'Result:'
+    result_index = rationale.find('Result:')
+    if result_index != -1:
+        matches_before_result = re.findall(r'([\d,]+(?:\.\d+)?)', rationale[:result_index])
+        if matches_before_result:
+            return matches_before_result[-1].strip()
+
+    return None
+
+def extract_result_all(completion, gt):
+    y_pred = extract_answer_number(completion)
+    if y_pred is not None:
+        y_pred = str(y_pred)
+        y_pred = y_pred.replace(",", "")
+    if y_pred not in (None, "") and float(y_pred) == float(gt):
+        return y_pred, True
+
+    y_pred = get_last_answer(completion)
+    if y_pred is not None:
+        y_pred = str(y_pred)
+        y_pred = y_pred.replace(",", "")
+    if y_pred not in (None, "") and float(y_pred) == float(gt):
+        return y_pred, True
+    
+    y_pred = extract_result(completion)
+    if y_pred is not None:
+        y_pred = str(y_pred)
+        y_pred = y_pred.replace(",", "")
+    if y_pred not in (None, "") and float(y_pred) == float(gt):
+        return y_pred, True
+
+    y_pred_list = extract_results_with_commas(completion)
+    if len(y_pred_list) > 0:
+        for y_pred in y_pred_list:
+            if y_pred is not None:
+                y_pred = str(y_pred)
+                y_pred = y_pred.replace(",", "")
+            if y_pred not in (None, "") and float(y_pred) == float(gt):
+                return y_pred, True
+
+    y_pred_list = extract_math_shepherd_results(completion)
+    if len(y_pred_list) > 0:
+        for y_pred in y_pred_list:
+            if y_pred not in (None, "") and float(y_pred) == float(gt):
+                return y_pred, True
+
+    return y_pred, False
+
+
+
 def is_number(s):
     try:
         float(s)
@@ -133,20 +222,25 @@ def gsm8k_test(model, data_path, start=0, end=MAX_INT, batch_size=1, tensor_para
     invalid_outputs = []
     for idx, (prompt, completion, prompt_answer) in enumerate(zip(gsm8k_ins, res_completions, gsm8k_answers)):
         doc = {'question': prompt}
-        y_pred = extract_answer_number(completion)
-        if y_pred is None:
-            y_pred = get_last_answer(completion)
-        if y_pred != None:
-            if float(y_pred) == float(prompt_answer):
-                result.append(float(y_pred) == float(prompt_answer))
-            else:
-                result.append(False)
-                temp = {'question': prompt, 'output': completion, 'pred':y_pred, 'answer': prompt_answer}
-                invalid_outputs.append(temp)
+        #y_pred = extract_answer_number(completion)
+        #if y_pred is None:
+            #y_pred = get_last_answer(completion)
+        #if y_pred != None:
+            #if float(y_pred) == float(prompt_answer):
+                #result.append(float(y_pred) == float(prompt_answer))
+            #elif str(extract_result(completion)) == str(prompt_answer):
+                #result.append(True)
+        y_pred, success = extract_result_all(completion, prompt_answer)
+        if success:
+            result.append(True)
         else:
             result.append(False)
             temp = {'question': prompt, 'output': completion, 'pred':y_pred, 'answer': prompt_answer}
             invalid_outputs.append(temp)
+        #else:
+            #result.append(False)
+            #temp = {'question': prompt, 'output': completion, 'pred':y_pred, 'answer': prompt_answer}
+            #invalid_outputs.append(temp)
     acc = sum(result) / len(result)
     #print('len invalid outputs ====', len(invalid_outputs), ', valid_outputs===', invalid_outputs)
     #print('start===', start, ', end====', end)
