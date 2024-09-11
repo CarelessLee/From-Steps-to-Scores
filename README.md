@@ -16,7 +16,7 @@ The repo currently consists of Stage 1 and Stage 2's work for the Certainty Pred
 
 ## Getting Start
 
-``` 
+```bash
 git clone git@github.com:CarelessLee/From-Steps-to-Scores.git
 
 cd From-Steps-to-Scores
@@ -28,7 +28,7 @@ cd From-Steps-to-Scores
 
 The **LMFlow** environment contains all the packages and dependencies required.
 
-```  
+```bash
 git clone git@github.com:OptimalScale/LMFlow.git
 cd LMFLow
 conda create -n lmflow python=3.9 -y
@@ -49,7 +49,7 @@ All pre-processed datasets from MathQA, GSM8K, and Mathmatics, and the prelimina
 
 With the three pre-processed datasets, we can train the MCQ models individually. We provide an example of using **MathQA** dataset with **meta-llama/Meta-Llama-3-8B** model. Other MCQ models could be trained similarly with a change of testset and baseline model.
 
-```
+```bash
 # put MathQA json file in the UncertaintyExperiments directory and config 'dataset_path' in mathqa_run_prediction.sh accordingly
 cd UncertaintyExperiments
 ./mathqa_run_prediction.sh
@@ -65,9 +65,35 @@ This will create a directory 'mathqa_model' that stores the parameters of the tr
 
 with the trained MCQ, we can now reinforce LLMs with the help of RLHF algorithms. Here we demonstrate the usecase of DPO. Remember to load the pre-processed datasets (e.g. fully_processed_deepmind_responses.json) into the **UncertaintyExperiments** directory beforehand.
 
-```
+```bash
 ./new_run_dpo.sh
 ```
+
+## RAFT
+with the trained MCQ, we can now reinforce LLMs with the help of RAFT algorithm.
+
+Use restart_raft.sh, and config some important parameters
+
+Remember to comment out the corresponding lines of code of the GPUs that don't use.
+```bash
+# specify the base_dir as where to store the models during iterative process, 
+base_dir="iterative_llama_pool_prm"
+mkdir -p $base_dir
+# You should edit the sft model dir accordingly
+sft_model="meta-llama/Meta-Llama-3-8B-Instruct"
+reward_model="CarelessLee/MCQ_pooled_full_rationale_confidence_predictor"
+
+# set to 1 if want to verify the pipeline with small amount of data
+sanity_check=0
+# specify the number and which GPUs to use
+num_gpus=4
+gpu_list=0,1,2,3
+
+# set random seed
+random_seed=42
+```
+
+If want to use Math-Shepherd Reward Model, change the file name from rso_reward_llama.py to rso_reward.py in get_reward.sh, and vice versa !!!
 
 ## TODO
 * Optimize and add ISP-related code
