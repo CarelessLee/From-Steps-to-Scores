@@ -1,3 +1,5 @@
+# This is the Python implementation for sampling rationales with LLaMA Policy Models
+
 import argparse
 import json
 import re
@@ -9,6 +11,7 @@ from datasets import load_dataset, Dataset
 import time
 import random
 
+# specific format designed to extract step by step rationales from LLaMA 3/3.1 8B Instruct
 def format_dataset(raw_datasets):
     formatted_dataset = []
     for sample in raw_datasets:
@@ -108,7 +111,7 @@ def extract_math_problem(prompt):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_name_or_path", type=str, default='meta-llama/Meta-Llama-3-8B-Instruct')  # model path
-    parser.add_argument("--dataset", type=str, default='openai/gsm8k')  # data path
+    parser.add_argument("--dataset", type=str, default='openai/gsm8k')  # data path, default to use GSM8K
     parser.add_argument("--batch_size", type=int, default=1024)  # batch_size
     parser.add_argument("--tensor_parallel_size", type=int, default=2)  # tensor_parallel_size
     parser.add_argument("--output_dir", type=str, default="rso_data")  # output location
@@ -133,8 +136,10 @@ if __name__ == "__main__":
     else:
         #original version
         all_prompt = format_dataset(raw_datasets)
-        #prompt = all_prompt[args.current_iter*args.batch_size_per_iter:(args.current_iter+1)*args.batch_size_per_iter]
+
         prompt = all_prompt
+        ####### If want to use part of the data instead of full load, use this commented code and adjust teh ratio of data
+        #prompt = all_prompt[args.current_iter*args.batch_size_per_iter:(args.current_iter+1)*args.batch_size_per_iter]
         prompt = prompt[int(len(prompt)*args.local_rank/args.num_gpus):int(len(prompt)*(args.local_rank+1)/args.num_gpus)]
 
     random.shuffle(prompt)
@@ -172,7 +177,7 @@ if __name__ == "__main__":
             for text in generated_text:
                 extracted_rationale = extract_content(text)
                 if extracted_rationale != "" and extracted_rationale.startswith('Step 1:'):
-                    # for math shepherd model use
+                    # prepare the data for math shepherd reward model use
                     if "math-shepherd" in args.model_name_or_path:
                         extracted_rationale = extracted_rationale.replace("Result:", "The answer is:")
                     cleaned_rationales.append(extracted_rationale)
@@ -180,9 +185,10 @@ if __name__ == "__main__":
 
             
             if "math-shepherd" in args.model_name_or_path:
-                # for math shepherd model use
+                # prepare this data for math shepherd reward model use
                 store_data.append({"prompt":question, "answers":cleaned_rationales})
             else:
+                # prepare this data for our reward model use
                 store_data.append({"question":question, "sampled_rationales":cleaned_rationales})
         count += 1
         if count % 1 == 0:

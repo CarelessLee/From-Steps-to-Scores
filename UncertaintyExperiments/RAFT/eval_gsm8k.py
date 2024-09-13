@@ -1,3 +1,5 @@
+# evaluate on GSM8K dataset
+
 import argparse
 import json
 import re
@@ -10,6 +12,7 @@ import sys
 import time
 MAX_INT = sys.maxsize
 
+# Designed for math shepherd policy model
 def extract_math_shepherd_results(text):
     sen_pattern = r'The answer is: [^.]+\.'
     # Find all matches
@@ -30,6 +33,7 @@ def extract_math_shepherd_results(text):
     return numbers
 
 
+# Designed to extract a list of answer after Result: that has comma inside, i.e. 100,000
 def extract_results_with_commas(llm_output):
     # Use regex to find all occurrences of numbers (with or without commas) after "Result: "
     results = re.findall(r'Result:\s*\$?([\d,]+)', llm_output)
@@ -39,6 +43,7 @@ def extract_results_with_commas(llm_output):
 
     return results_cleaned
 
+# Designed to extract the answer after Result:
 def extract_result(rationale):
     # example rationale: 'Step 1: ... Step 2: ... Step n: Result: 666'
     # Search for the final numerical value after 'Result:'
@@ -58,6 +63,7 @@ def extract_result(rationale):
 
     return None
 
+# main entrance for the answer extraction
 def extract_result_all(completion, gt):
     y_pred = extract_answer_number(completion)
     if y_pred is not None:

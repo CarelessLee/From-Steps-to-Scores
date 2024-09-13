@@ -1,3 +1,6 @@
+# This is the Python Implementation for use Mistral based reward model scoring sample rationales
+# and select the best sample for later SFT
+
 from transformers import AutoTokenizer
 from transformers import AutoModelForCausalLM
 import torch

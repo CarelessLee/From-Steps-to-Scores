@@ -1,3 +1,5 @@
+# merge the selected rationales after reward scoring from multi-GPU to a single result.json file
+
 import json
 import argparse
 import os

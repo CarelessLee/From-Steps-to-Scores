@@ -1,3 +1,5 @@
+# invoke two evaluation task on GSM8K and MATH
+
 mkdir -p eval_result
 python eval_gsm8k.py \
     --model $1 \

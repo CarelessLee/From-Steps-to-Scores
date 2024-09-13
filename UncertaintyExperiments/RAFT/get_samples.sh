@@ -1,3 +1,5 @@
+# This is the entrace bash file to use policy model to sample step wise ratioanles
+
 python rso_generate_llama.py  \
     --model_name_or_path $1 \
     --current_iter $2 \
