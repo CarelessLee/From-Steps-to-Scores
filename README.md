@@ -72,9 +72,77 @@ with the trained MCQ, we can now reinforce LLMs with the help of RLHF algorithms
 ## RAFT
 with the trained MCQ, we can now reinforce LLMs with the help of RAFT algorithm.
 
+### Overall Flow of Pipeline
+Notice: This script implement multi-process running by paralle running multiple bash script, therefore will generate multiple files.
+
+1. First open the restart_raft.sh and config some important parameters (Details see next section).
+
+2. This script contains several core scripts for different tasks, which are "get_samples.sh", "get_reward.sh", "merge_data.py", "sft.sh", "evaluate.sh".
+
+3. The entire flow starts with get_samples.sh, it will use the policy model to sample step by step rationales to the given dataset. The dataset will pull from hugging face with the given name. The sampled rationales will be output to the infer_set dir of current iteration dir.
+
+4. Second step is get_reward.sh, it will use the reward model specified to score the sampled rationales and select the best one for later SFT. It's input comes from the infer_set of current dir, and output the selected rationales to filter_set of current dir"
+
+5. Third step is the merge_data.py, it simply merges the output files from different GPU to a single file for later SFT.
+
+6. Fourth step is the sft.sh, it will take the selected rationales from filter_set of current iteration dir as training data. The fine-tuned model after training will be saved into next iteration's work dir. i.e. if current work dir is model0, the fine-tuned model will be saved to model1.
+
+7. Fifth step is evaluate.sh, it will test the fine-tuned model on gsm8k and math datasets.
+
+8. The algorithm will repeat the above steps in new iterations until reach the specified number of iteration.
+
+
+
+### Important Notes for using the restart_raft.sh script
 Use restart_raft.sh, and config some important parameters
 
+1. Please config the parameters as you need, especially the num_gpus and corresponding gpu_list
+
+2. The numeric number at the end of each shell command is the local rank of GPU, make sure it has to be consecutive order
+    ex: gpu_list=0,2,4,6, the relative local rank for these GPUs are still 0, 1, 2, 3
+
+3. Comment out the line of shell command with GPUs that you don't use
+
+4. When use the evaluate.sh script, use 1 GPU is sufficient for current project. More GPU doesn't necessarily faster.
+
+5. This script expand the iterative for loop to different section, so that you can easily resart/continue the algorithm 
+    is unexpected case happened, i.e. CUDA out of mem.
+
+6. Evaluation result are saved into eval_result dir in the RAFT dir
+
+7. The evaluation will load data from RAFT/data/test
+
+8. The sanity_check parameter represents a test run with small amount of data if set to 1, default to 0
+
 Remember to comment out the corresponding lines of code of the GPUs that don't use.
+
+For example, if only use 4 GPUs, then only use the shell command of assigned GPUSs
+
+i.e. If use 0,2,4,6, then comment out the code of 1,3,5,7. Same apply to get_rewards.sh
+
+And notice the local rank at the end of each line is still 0, 1, 2, 3
+
+```bash
+num_gpus=4
+gpu_list=0,2,4,6
+CUDA_VISIBLE_DEVICES=0 bash ./get_samples.sh ${sft_model} 0 ${num_gpus} ${model_dir}/infer_set ${sanity_check} 0 ${random_seed} &
+
+#CUDA_VISIBLE_DEVICES=1 bash ./get_samples.sh ${sft_model} 0 ${num_gpus} ${model_dir}/infer_set ${sanity_check} 1 ${random_seed} &
+
+CUDA_VISIBLE_DEVICES=2 bash ./get_samples.sh ${sft_model} 0 ${num_gpus} ${model_dir}/infer_set ${sanity_check} 1 ${random_seed} &
+
+#CUDA_VISIBLE_DEVICES=3 bash ./get_samples.sh ${sft_model} 0 ${num_gpus} ${model_dir}/infer_set ${sanity_check} 3 ${random_seed} &
+
+CUDA_VISIBLE_DEVICES=4 bash ./get_samples.sh ${sft_model} 0 ${num_gpus} ${model_dir}/infer_set ${sanity_check} 2 ${random_seed} &
+
+#CUDA_VISIBLE_DEVICES=5 bash ./get_samples.sh ${sft_model} 0 ${num_gpus} ${model_dir}/infer_set ${sanity_check} 5 ${random_seed} &
+
+CUDA_VISIBLE_DEVICES=6 bash ./get_samples.sh ${sft_model} 0 ${num_gpus} ${model_dir}/infer_set ${sanity_check} 3 ${random_seed} &
+
+#CUDA_VISIBLE_DEVICES=7 bash ./get_samples.sh ${sft_model} 0 ${num_gpus} ${model_dir}/infer_set ${sanity_check} 7 ${random_seed} &
+```
+
+### Example of configuration of restart_raft.sh
 ```bash
 # specify the base_dir as where to store the models during iterative process, 
 base_dir="iterative_llama_pool_prm"
@@ -93,7 +161,6 @@ gpu_list=0,1,2,3
 random_seed=42
 ```
 
-If want to use Math-Shepherd Reward Model, change the file name from rso_reward_llama.py to rso_reward.py in get_reward.sh, and vice versa !!!
 
 ## TODO
 * Optimize and add ISP-related code
